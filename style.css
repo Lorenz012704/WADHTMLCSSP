@@ -1,0 +1,227 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #131111;
+    color: #fff;
+    margin: 0;
+}
+
+#header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background-color: #050313;
+    z-index: 1000;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #000000;
+    position: relative;
+    animation: glowBackground 2s infinite alternate;
+}
+
+@keyframes glowBackground {
+    from {
+        box-shadow: 0 0 10px rgba(4, 3, 71, 0.8);
+    }
+    to {
+        box-shadow: 0 0 30px rgba(19, 3, 248, 0.8);
+    }
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 25px 28px;
+    text-decoration: none;
+    position: relative; 
+}
+
+li a::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px; 
+    width: 100%;
+    background-color: transparent;
+    box-shadow: 0 0 10px rgba(248, 3, 3, 0.8);
+    transform: scaleX(0); 
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out; 
+}
+
+li.PersonaM4 a {
+    color: red;
+    border: 3px rgb(255, 255, 255);
+    font-weight: bold;
+    text-decoration: none; 
+    padding: auto;
+    border: auto;
+    margin: auto;
+}
+
+li.BUYNOW a {
+    border-style: outset;
+    border-width: 5px;
+    border-color: white;
+    padding: 5px;
+    margin-top: 15px;
+}
+
+li a:hover::after {
+    transform: scaleX(1); 
+}
+
+.pictext {
+    float: right;
+    margin-top: 135px;
+    margin-right: 40px;
+    border: 3px solid transparent;
+    box-shadow: 0 0 15px rgba(19, 3, 248, 0.8);
+    transition: box-shadow 0.6s ease-out;
+}
+
+.pictext:hover {
+    box-shadow: 0 0 30px rgba(19, 3, 248, 0.8);
+}
+
+.uptext {
+    float: left;
+    margin-top: 225px;
+    margin-left: 85px;
+    width: 40%; 
+}
+
+.uptext h1 span {
+    font-size: 1.25em;
+    color: red;
+}
+
+.uptext h1 {
+    font-size: 3.3em;
+    margin-bottom: 10px;
+}
+
+.uptext p {
+    margin-top: 25px;
+    font-size: 1.30em;
+}
+
+.headtwo {
+    margin-top: 125px;
+    justify-content: center;
+}
+
+.secondpic {
+    margin-bottom: -90px;
+    margin-left: 60px; 
+    clear: both; 
+    float: left;
+    margin-top: 35px;
+    border: 3px solid transparent;
+    box-shadow: 0 0 15px rgba(248, 3, 3, 0.8);
+    transition: box-shadow 0.6s ease-out;
+}
+
+.secondpic:hover {
+    box-shadow: 0 0 30px  rgba(80, 0, 0, 0.8);
+}
+
+@media (max-width: 768px) {
+    .secondpic {
+        margin-left: 5%;
+    }
+}
+
+.thirdpic {
+    margin-bottom: -90px;
+    margin-left: 60px; 
+    clear: both; 
+    float: right;
+    margin-top: -420px;
+    margin-right: 94px;
+    position: relative;
+}
+
+.thirdpic::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0); /* Adjust the alpha value to control the overlay transparency */
+    z-index: 1;
+    transition: background 0.6s ease-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #000; /* Adjust the text color */
+    font-size: 2.5em; /* Adjust the font size */
+}
+
+.thirdpic:hover::before {
+    background: rgba(255, 255, 255, 0.5); /* Adjust the alpha value to control the overlay transparency on hover */
+    box-shadow: 0 0 30px rgba(80, 0, 0, 0.8); /* Add a box shadow on hover */
+}
+
+.thirdpic:hover::before {
+    content: "Lorem Ipsum Reyes Genesis Awardos los tomos de obra Calidade Sie Estados Unidos dela fuerta nandie."; 
+}
+
+
+.skills{
+    margin-bottom: -90px;
+    margin-left: 20px; 
+    clear: both; 
+    float: left;
+    margin-top: 135px;
+    border: 0px solid transparent;
+    box-shadow: 0 0 55px rgba(255, 255, 255, 0.8);
+    transition: box-shadow 0.6s ease-out; 
+    border-start-end-radius: 100%;
+}
+
+.rapid{
+    float: left;
+    margin-top: 225px;
+    margin-left: 85px;
+    width: 40%; 
+}
+
+.rapid h1 span {
+    font-size: 1.25em;
+    color: red;
+}
+
+.last{
+    margin-left: 500px;
+    border: 3px solid transparent;
+    box-shadow: 0 0 15px rgba(248, 3, 3, 0.8);
+    float: right;
+    margin-top: 1120px;
+    margin-left: 85px;
+    width: 40%; 
+}
+
+.last h1 span {
+    font-size: 1.25em;
+    color: blue;
+}
